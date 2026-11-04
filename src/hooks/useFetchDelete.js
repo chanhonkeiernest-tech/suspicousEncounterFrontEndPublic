@@ -24,7 +24,7 @@ const useFetchDelete = () => {
     try {
       const response = await fetch(apiUrl(url), {
         method: "Delete",
-        credentials: "include",
+        credentials: "same-origin",
         headers: {
           "Content-Type": "application/json",
         },
