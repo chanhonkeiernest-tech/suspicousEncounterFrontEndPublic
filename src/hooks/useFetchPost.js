@@ -24,7 +24,7 @@ const useFetchPost = () => {
     try {
       const response = await fetch(apiUrl(url), {
         method: "POST",
-        credentials: "same-origin",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

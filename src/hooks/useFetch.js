@@ -20,7 +20,7 @@ const useFetch = (url, options) => {
       try {
         const response = await fetch(apiUrl(url), {
           ...options,
-          credentials: "same-origin",
+          credentials: "include",
         });
         
         if (!response.ok) {
