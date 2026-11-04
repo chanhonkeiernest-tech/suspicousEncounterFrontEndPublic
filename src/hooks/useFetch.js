@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { apiUrl } from "../api";
 
 // A reusable data-fetching hook: any component can call useFetch(url)
 const useFetch = (url, options) => {
@@ -17,7 +18,10 @@ const useFetch = (url, options) => {
       setIsLoading(true);
       setError(null);
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(apiUrl(url), {
+          ...options,
+          credentials: "include",
+        });
         
         if (!response.ok) {
           throw new Error(`Request failed (${response.status})`);
