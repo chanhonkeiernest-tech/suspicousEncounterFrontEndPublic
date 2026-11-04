@@ -3,7 +3,8 @@ import { defineConfig, loadEnv } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-  const { url } = loadEnv(mode, process.cwd(), '')
+  const env = loadEnv(mode, '.', 'VITE_')
+  const url = env.VITE_API_URL
 
   if (!url) {
     throw new Error('Set url in the project .env file to the backend URL.')
