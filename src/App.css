@@ -113,6 +113,36 @@
   font-weight: 700;
 }
 
+.encounters {
+  display: flex;
+}
+
+.navbar a:hover {
+  background-color: #FF00FF;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.mergebar {
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: rgb(247, 176, 243);
+  padding: 10px;
+  width: auto;
+  z-index: 100;
+}
+
 .new-encounter {
   width: min(100% - 32px, 640px);
   margin: 32px auto;
