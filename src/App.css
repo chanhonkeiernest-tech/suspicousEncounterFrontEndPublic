@@ -115,6 +115,7 @@
 
 .encounters {
   display: flex;
+  gap: 12px;
 }
 
 .pending-requests {
@@ -123,6 +124,11 @@
   gap: 12px;
 }
 
+.encounter-data{
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+}
 
 .request-data {
   border: 1px solid #d1d5db;
