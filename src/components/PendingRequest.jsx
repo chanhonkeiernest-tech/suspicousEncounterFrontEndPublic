@@ -16,7 +16,7 @@ const PendingRequest = () => {
     <div className="encounters">
       <h1>Pending request</h1>
       {dataP.map((request) => (
-        <RequestCard key={request.id ?? request._id} data={request} reject={false} />
+        <p><RequestCard key={request.id ?? request._id} data={request} reject={false} /></p>
       ))}
       {dataP.length===0&&<p>no pending request</p>}
 
