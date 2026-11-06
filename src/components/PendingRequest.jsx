@@ -13,13 +13,14 @@ const PendingRequest = () => {
   const dataR = data?.mergeR?? [];
 
   return (
-    <div className="encounters">
+    <div className="pending-requests">
       <h1>Pending request</h1>
-      {dataP.map((request) => (
-        <p><RequestCard key={request.id ?? request._id} data={request} reject={false} /></p>
-      ))}
-      {dataP.length===0&&<p>no pending request</p>}
-
+      <div className="pending-requests-cards">
+        {dataP.map((request) => (
+          <RequestCard key={request.id ?? request._id} data={request} reject={false} />
+        ))}
+        {dataP.length===0&&<p>no pending request</p>}
+      </div>
       <h1>Rejected request</h1>
       {dataR.map((request) => (
         <RequestCard key={request.id ?? request._id} data={request} reject={true}/>
