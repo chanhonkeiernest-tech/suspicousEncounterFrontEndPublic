@@ -123,10 +123,6 @@
   gap: 12px;
 }
 
-.pending-requests-cards{
-  display: flex;
-  flex-direction: row;
-}
 
 .request-data {
   border: 1px solid #d1d5db;
