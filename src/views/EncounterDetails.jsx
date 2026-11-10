@@ -29,7 +29,14 @@ const EncounterDetails = () => {
   return (
     <div className="encounter-details">
       <MergeBar />
-      <EncounterCard data={data} showDetailsLink={false} />
+      <div className="main-encounter-detail">
+        <EncounterCard data={data[0]} showDetailsLink={false} />
+      </div>
+      <div className="recommend-encounter-detail">
+        {data.slice(1).map((encounter) => (
+          <EncounterCard key={encounter.id} data={encounter} />
+        ))}
+      </div>
     </div>
   );
 };
