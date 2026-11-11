@@ -27,7 +27,7 @@ const useFetch = (url, options) => {
           throw new Error(`Request failed (${response.status})`);
         }
         const result = await response.json();
-        console.log(result);
+       
         setData(result);
       } catch (requestError) {
         setError(
