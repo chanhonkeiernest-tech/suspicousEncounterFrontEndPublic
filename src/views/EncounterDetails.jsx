@@ -33,8 +33,8 @@ const EncounterDetails = () => {
         <EncounterCard data={encounters[0]} showDetailsLink={false} />
       </div>
       <div className="recommend-encounter-detail">
-        <f2>Similar encounter</f2>
-        {data.length===1 && <p>No recommendation</p>}
+        <h1>Similar encounter</h1>
+        {encounters.length <= 1 && <p>No recommendation</p>}
         {encounters.slice(1).map((encounter) => (
           <EncounterCard key={encounter.id} data={encounter} />
         ))}
