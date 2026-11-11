@@ -115,7 +115,14 @@
 
 .encounters {
   display: flex;
+  flex-direction: column;
   gap: 12px;
+}
+
+.encounters > .encounter-data {
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .pending-requests {
@@ -134,14 +141,14 @@
   align-items: center;
 }
 
-.main-encounter-detail{
+.main-encounter-detail > .encounter-details{
   
   border: 1px solid #6b7280;
   border-radius: 8px;
   max-width: 100%;
   width: fit-content;
 }
-.recommend-encounter-detail{
+.recommend-encounter-detail > .encounter-details{
   border: 1px solid #6b7280;
   border-radius: 8px;
   max-width: 100%;
