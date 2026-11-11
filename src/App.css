@@ -124,6 +124,17 @@
   gap: 12px;
 }
 
+.main-encounter-detail{
+  align-items: center;
+}
+
+.encounter-details{
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+
 .encounter-data{
   border: 1px solid #d1d5db;
   border-radius: 8px;

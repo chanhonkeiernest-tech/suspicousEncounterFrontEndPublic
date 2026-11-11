@@ -23,14 +23,14 @@ const MergeBar = () => {
   const username = data?.user?.username ?? "noname";
 
   return (
-    <h2 className="mergebar">
-      Select the best encounter post to merge {topic} by {username} to{" "}
+    <div className="mergebar">
+      <h2>Select the best encounter post to merge {topic} by {username} to {" "}</h2>
       {merge && (
         <button type="button" onClick={clearMerge}>
           Clear selection
         </button>
       )}
-    </h2>
+    </div>
   );
 };
 
