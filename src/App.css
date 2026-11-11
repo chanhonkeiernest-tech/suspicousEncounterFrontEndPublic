@@ -124,17 +124,16 @@
   gap: 12px;
 }
 
-.main-encounter-detail{
-  align-items: center;
-}
+
 
 .encounter-details{
+  align-items: center;
    display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.main-encounter-details{
+.main-encounter-detail{
 
   border: 1px solid #d1d5db;
   border-radius: 8px;
