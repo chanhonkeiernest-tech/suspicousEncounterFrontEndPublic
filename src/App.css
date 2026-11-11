@@ -127,19 +127,26 @@
 
 
 .encounter-details{
-  align-items: center;
-   display: flex;
+  margin-top: 16px;
+  display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 .main-encounter-detail{
+  align-items: center;
   border: 1px solid #6b7280;
   border-radius: 8px;
   max-width: 100%;
   width: fit-content;
 }
+.recommend-encounter-detail{
+  border: 1px solid #6b7280;
+  border-radius: 8px;
+  max-width: 100%;
+  width: fit-content;
 
+}
 .main-encounter-detail .encounter-data {
   border: 0;
 }
