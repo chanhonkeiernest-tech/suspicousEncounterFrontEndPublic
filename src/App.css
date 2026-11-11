@@ -129,6 +129,13 @@
 }
 
 .encounter-details{
+   display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.main-encounter-details{
+
   border: 1px solid #d1d5db;
   border-radius: 8px;
   padding: 16px;

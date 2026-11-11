@@ -23,21 +23,21 @@ const Encounter = () => {
       <MergeBar />
       <h1>Encounters</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="search">search for name</label>
+        <label htmlFor="search">search for name: </label>
         <input
           id="search"
           value={inputSearch}
           onChange={(event) => setInputSearch(event.target.value)}
           defaultValues=""
         />
-        <label htmlFor="tag">search for tag</label>
+        <label htmlFor="tag"> search for tag: </label>
         <input
           id="tag"
           value={inputTag}
           onChange={(event) => setInputTag(event.target.value)}
           defaultValues=""
         />
-        <label htmlFor="type">search for type</label>
+        <label htmlFor="type"> search for type:</label>
         <select
           id="type"
           value={inputType}
@@ -47,7 +47,7 @@ const Encounter = () => {
           <option value="uncertain">Uncertain</option>
           <option value="certain">Certain</option>
         </select>
-        <label htmlFor="issue">search for issue</label>
+        <label htmlFor="issue"> search for issue:</label>
         <select
           id="issue"
           value={inputIssue}
