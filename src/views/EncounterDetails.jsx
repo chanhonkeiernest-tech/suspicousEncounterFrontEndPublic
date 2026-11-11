@@ -24,16 +24,16 @@ const EncounterDetails = () => {
   if (error) return <div role="alert">{error}</div>;
   if (!data) return <div>Encounter not found.</div>;
 
-  
+  const encounters = Array.isArray(data) ? data : [data];
 
   return (
     <div className="encounter-details">
       <MergeBar />
       <div className="main-encounter-detail">
-        <EncounterCard data={data[0]} showDetailsLink={false} />
+        <EncounterCard data={encounters[0]} showDetailsLink={false} />
       </div>
       <div className="recommend-encounter-detail">
-        {data.slice(1).map((encounter) => (
+        {encounters.slice(1).map((encounter) => (
           <EncounterCard key={encounter.id} data={encounter} />
         ))}
       </div>
