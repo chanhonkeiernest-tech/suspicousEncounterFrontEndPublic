@@ -115,12 +115,12 @@
 
 .encounters {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
 .encounters > .encounter-data {
-  width: 100%;
+  flex: 1 1 320px;
   min-width: 0;
   overflow-wrap: anywhere;
 }
@@ -136,6 +136,7 @@
 .encounter-details{
   margin-top: 16px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 12px;
   align-items: center;
