@@ -134,10 +134,14 @@
 }
 
 .main-encounter-detail{
-
-  border: 1px solid #d1d5db;
+  border: 1px solid #6b7280;
   border-radius: 8px;
-  padding: 16px;
+  max-width: 100%;
+  width: fit-content;
+}
+
+.main-encounter-detail .encounter-data {
+  border: 0;
 }
 
 
