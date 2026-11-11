@@ -34,18 +34,18 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Encounter /> },
-      { path: 'encounter/:id', element: <EncounterDetails /> },
+      { path: '/encounter/:id', element: <EncounterDetails /> },
       {
         element: <ProtectedRoute />,
         children: [
           
-          { path: 'NewEncounter', element: <NewEncounter /> },
-          { path: 'mergeRequest', element: <MergeRequest /> },
-          { path: 'MyEncounters', element: <MyEncounter /> },
+          { path: '/NewEncounter', element: <NewEncounter /> },
+          { path: '/mergeRequest', element: <MergeRequest /> },
+          { path: '/MyEncounters', element: <MyEncounter /> },
         ],
       },
-      { path: 'login', element: <Login /> },
-      { path: 'register', element: <Register /> },
+      { path: '/login', element: <Login /> },
+      { path: '/register', element: <Register /> },
     ],
   },
 ])
