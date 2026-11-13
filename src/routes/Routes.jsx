@@ -9,7 +9,7 @@ import Encounter from '../views/Encounter';
 import EncounterDetails from '../views/EncounterDetails';
 import MergeRequest from '../views/MergeRequest';
 import MyEncounter from '../views/MyEncounter';
-import Logout from '..components/Logout';
+import Logout from '../components/logout';
 
 function ProtectedRoute() {
   const { isAuthenticated, isLoading, authError } = useLogin()
