@@ -1,6 +1,6 @@
 import { useLogin } from '../context/LoginContext'
 
-export const Logout = async () => {
+const Logout = async () => {
 const { logout, user } = useLogin()
     const action = await logout({ username: String(username), password: String(password) })
 
@@ -9,3 +9,4 @@ const { logout, user } = useLogin()
     
      return <Navigate to="/" replace />
 }
+export default  Logout ;
