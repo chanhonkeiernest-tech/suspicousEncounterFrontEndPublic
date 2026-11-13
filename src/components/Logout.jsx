@@ -9,15 +9,16 @@ const Logout = () => {
   const [error, setError] = useState('')
 
   useEffect(() => {
-     logout()
+    const signOut = async () => {
+      await logout()
 
-    
-    if (!isAuthenticated) setLoggedOut(true)
-    else{
+      if (!isAuthenticated) setLoggedOut(true)
+      else {
         setError("logout failed")
+      }
     }
 
-    
+    signOut()
   }, [])
 
   if (loggedOut) return <Navigate to="/" replace />
