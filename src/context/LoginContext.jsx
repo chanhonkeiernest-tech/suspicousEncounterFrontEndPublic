@@ -127,6 +127,7 @@ const LoginProvider = ({ children }) => {
     try {
       const response = await fetch(apiUrl("/login/nouser"), {
         method: "GET",
+        credentials: "include",
       });
       const payload = await readResponse(response);
       if (!response.ok) {

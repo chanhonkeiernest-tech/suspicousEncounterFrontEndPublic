@@ -3,25 +3,28 @@ import { Navigate } from 'react-router-dom'
 import { useLogin } from '../context/LoginContext'
 
 const Logout = () => {
-  const { logout, isAuthenticated } = useLogin()
-  
+  const { logout, user } = useLogin()
+  const signOutStarted = useRef(false)
   const [loggedOut, setLoggedOut] = useState(false)
   const [error, setError] = useState('')
 
   useEffect(() => {
-    const signOut = async () => {
-      await logout()
+    if (signOutStarted.current) return
+    signOutStarted.current = true
 
-      if (!isAuthenticated) setLoggedOut(true)
-      else {
-        setError("logout failed")
+    const signOut = async () => {
+      try {
+        await logout()
+        setLoggedOut(true)
+      } catch (logoutError) {
+        setError(logoutError instanceof Error ? logoutError.message : 'Logout failed')
       }
     }
 
     signOut()
-  }, [])
+  }, [logout])
 
-  if (loggedOut) return <Navigate to="/" replace />
+  if (!user) return <Navigate to="/" replace />
   if (error) return <p role="alert">{error}</p>
   return <p>Signing out...</p>
 }
