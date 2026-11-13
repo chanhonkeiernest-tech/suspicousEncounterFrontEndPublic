@@ -126,9 +126,7 @@ const LoginProvider = ({ children }) => {
     setAuthError("");
     try {
       const response = await fetch(apiUrl("/login/nouser"), {
-        method: "POST",
-        credentials: "include",
-        headers: { Accept: "application/json" },
+        method: "GET",
       });
       const payload = await readResponse(response);
       if (!response.ok) {
