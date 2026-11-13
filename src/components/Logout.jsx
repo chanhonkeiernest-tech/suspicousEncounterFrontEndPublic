@@ -6,5 +6,6 @@ const { logout, user } = useLogin()
 
     if(user===null)return <Navigate to="/" replace />
 
+    
      return <Navigate to="/" replace />
 }
