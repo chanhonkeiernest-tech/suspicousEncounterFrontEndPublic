@@ -1,7 +1,7 @@
-import {useSearch} from "../context/SearchContext";
+
 import UnmergeEncounterCard from "./UnmergeEncounterCard";
 import useFetch from "../hooks/useFetch";
-import MergeBar from "./MergeBar";
+
 
 
 const MyEncounters = () => {

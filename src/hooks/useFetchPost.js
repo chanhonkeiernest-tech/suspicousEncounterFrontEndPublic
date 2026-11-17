@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { apiUrl } from "../api";
 
 const readResponse = async (response) => {
   const body = await response.text();
@@ -21,8 +22,9 @@ const useFetchPost = () => {
     setError(null);
 
     try {
-      const response = await fetch(url, {
+      const response = await fetch(apiUrl(url), {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

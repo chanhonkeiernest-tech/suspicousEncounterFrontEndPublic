@@ -18,19 +18,19 @@ const MergeBar = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div role="alert">{error}</div>;
 
-  const origin = data?.origin ?? false;
-  const topic = data?.topic ?? "no title";
-  const username = data?.user?.username ?? "noname";
+  const origin = data?.[0]?.origin ?? false;
+  const topic = data?.[0]?.topic ?? "no title";
+  const username = data?.[0]?.user?.username ?? "noname";
 
   return (
-    <h2>
-      Select the best encounter post to merge {topic} by {username} to{" "}
+    <div className="mergebar">
+      <h2>Select the best encounter post to merge {topic} by {username} to {" "}</h2>
       {merge && (
         <button type="button" onClick={clearMerge}>
           Clear selection
         </button>
       )}
-    </h2>
+    </div>
   );
 };
 

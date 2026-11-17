@@ -31,16 +31,16 @@ const RequestCard = ({data, reject}) => {
 
   return (
     <div className="request-data">
-      <h2>
-        Merge {encounterToBeMerged?.topic} by {userO?.username ?? "unknown user"} to{" "}
-        {encounterOrgin?.topic} by {userM?.username ?? "unknown user"}{" "}
+      <p>
+        Merge {encounterToBeMerged?.topic} by {userM?.username ?? "unknown user"} to{" "}
+        {encounterOrgin?.topic} by {userO?.username ?? "unknown user"}{" "}
         <button type="button" onClick={() => respond("/encounterMerging", "Accept")} disabled={isLoading}>
           {isLoading && action === "Accept" ? "Accepting..." : "Accept"}
         </button>{" "}
         <button type="button" onClick={() => respond("/encounterMerge/reject", "Reject")} disabled={isLoading||reject}>
           {isLoading && action === "Reject" ? "Rejecting..." : "Reject"}
         </button>
-      </h2>
+      </p>
       {mergeError && <p role="alert">{mergeError}</p>}
     </div>
   );

@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { apiUrl } from "../api";
 
 const LoginContext = createContext(null);
 
@@ -37,7 +38,7 @@ const LoginProvider = ({ children }) => {
 
     const restoreSession = async () => {
       try {
-        const response = await fetch("/checksession", {
+        const response = await fetch(apiUrl("/checksession"), {
           credentials: "include",
           headers: { Accept: "application/json" },
           signal: controller.signal,
@@ -71,7 +72,7 @@ const LoginProvider = ({ children }) => {
   const login = useCallback(async ({ username, password }) => {
     setAuthError("");
     try {
-      const response = await fetch("/login/user", {
+      const response = await fetch(apiUrl("/login/user"), {
         method: "POST",
         credentials: "include",
         headers: {
@@ -98,7 +99,7 @@ const LoginProvider = ({ children }) => {
   const register = useCallback(async (credentials) => {
     setAuthError("");
     try {
-      const response = await fetch("/login/newuser", {
+      const response = await fetch(apiUrl("/login/newuser"), {
         method: "POST",
         credentials: "include",
         headers: {
@@ -124,10 +125,9 @@ const LoginProvider = ({ children }) => {
   const logout = useCallback(async () => {
     setAuthError("");
     try {
-      const response = await fetch("/login/nouser", {
-        method: "POST",
+      const response = await fetch(apiUrl("/login/nouser"), {
+        method: "GET",
         credentials: "include",
-        headers: { Accept: "application/json" },
       });
       const payload = await readResponse(response);
       if (!response.ok) {

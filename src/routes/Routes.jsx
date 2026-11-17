@@ -9,6 +9,7 @@ import Encounter from '../views/Encounter';
 import EncounterDetails from '../views/EncounterDetails';
 import MergeRequest from '../views/MergeRequest';
 import MyEncounter from '../views/MyEncounter';
+import Logout from '../components/Logout';
 
 function ProtectedRoute() {
   const { isAuthenticated, isLoading, authError } = useLogin()
@@ -34,18 +35,19 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Encounter /> },
-      { path: 'encounter/:id', element: <EncounterDetails /> },
+      { path: '/encounter/:id', element: <EncounterDetails /> },
       {
         element: <ProtectedRoute />,
         children: [
           
-          { path: 'NewEncounter', element: <NewEncounter /> },
-          { path: 'mergeRequest', element: <MergeRequest /> },
-          { path: 'MyEncounters', element: <MyEncounter /> },
+          { path: '/NewEncounter', element: <NewEncounter /> },
+          { path: '/mergeRequest', element: <MergeRequest /> },
+          { path: '/MyEncounters', element: <MyEncounter /> },
         ],
       },
-      { path: 'login', element: <Login /> },
-      { path: 'register', element: <Register /> },
+      { path: '/login', element: <Login /> },
+      { path: '/register', element: <Register /> },
+      { path: '/logout', element: <Logout /> },
     ],
   },
 ])

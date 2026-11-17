@@ -1,7 +1,7 @@
 import {useSearch} from "../context/SearchContext";
 import EncounterCard from "./EncounterCard";
 import useFetch from "../hooks/useFetch";
-import MergeBar from "./MergeBar";
+
 
 
 const AllEncounter = () => {
