@@ -12,7 +12,7 @@ const MergeBar = () => {
         () => {},
       );
     }
-    window.location.reload();
+    
   }, [merge, post]);
 
   if (!merge) return null;
