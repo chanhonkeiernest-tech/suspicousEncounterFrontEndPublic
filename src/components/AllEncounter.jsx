@@ -6,7 +6,7 @@ import useFetch from "../hooks/useFetch";
 //Fetch all encounter and display them via encounter card. 
 const AllEncounter = () => {
   const {search, tag, type, issue} = useSearch();
-  const params = new URLSearchParams({ name: search, tag, type, issue });
+  const params = new URLSearchParams({ tag: tag, name: search, type: type, issue: issue });
   const EncounterURL = `/encounter?${params}`;
   const { data, isLoading, error } = useFetch(EncounterURL);
   if (isLoading) return <div>Loading...</div>;

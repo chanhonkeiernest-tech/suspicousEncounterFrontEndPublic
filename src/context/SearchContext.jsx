@@ -34,10 +34,6 @@ export const SearchProvider = ({ children }) => {
   };
 
 
-//   useEffect(() => {
-//     localStorage.setItem("sus-user", user);
-//   }, [merge]);
-
   return (
     <SearchContext.Provider value={{ search, tag, type, issue, selectSearch, selectTag, selectType, selectIssue}}>
       {children}
