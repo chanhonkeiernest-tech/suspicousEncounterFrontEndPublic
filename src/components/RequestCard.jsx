@@ -20,10 +20,12 @@ const RequestCard = ({data, reject}) => {
     try {
       await post(url, { id });
       setResolved(true);
+      
     } catch (error) {
       setMergeError(error instanceof Error ? error.message : `${actionName} failed`);
     } finally {
       setAction("");
+      window.location.reload();
     }
   };
 

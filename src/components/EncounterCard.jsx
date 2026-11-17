@@ -49,10 +49,12 @@ const EncounterCard = ({ data, showDetailsLink = true }) => {
       await post(url, dataSend);
       clearMerge();
       setMergeComplete(true);
+      
     } catch (error) {
       setMergeError(error instanceof Error ? error.message : "Merge failed");
     } finally {
       setIsMerging(false);
+      window.location.reload();
     }
   };
 
