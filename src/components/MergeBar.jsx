@@ -18,9 +18,9 @@ const MergeBar = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div role="alert">{error}</div>;
 
-  const origin = data?.origin ?? false;
-  const topic = data?.topic ?? "no title";
-  const username = data?.user?.username ?? "noname";
+  const origin = data[0]?.origin ?? false;
+  const topic = data[0]?.topic ?? "no title";
+  const username = data[0]?.user?.username ?? "noname";
 
   return (
     <div className="mergebar">
