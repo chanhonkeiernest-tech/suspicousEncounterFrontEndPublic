@@ -12,6 +12,7 @@ const readResponse = async (response) => {
   }
 };
 
+// A reusable data-fetching hook for delete: any component can call useFetch(url)
 const useFetchDelete = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);

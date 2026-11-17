@@ -1,7 +1,7 @@
 
 import useFetch from "../hooks/useFetch";
 import RequestCard from "./RequestCard";
-
+//Displya all merge request await to be approve
 const PendingRequest = () => {
   const { data, isLoading, error } = useFetch("/merge");
   if (isLoading) return <div>Loading...</div>;

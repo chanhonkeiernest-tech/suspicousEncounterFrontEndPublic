@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import RelatedCard from "./RelatedCard";
 import { useMerge } from "../context/MergeContext";
 import useFetchPost from "../hooks/useFetchPost";
-
+//Read a response data for a single encounter and display it as a card. In here it also handle merging 
 const EncounterCard = ({ data, showDetailsLink = true }) => {
   const { merge, selectMerge, clearMerge } = useMerge();
   const [expand, setExpand] = useState(false);
@@ -49,10 +49,12 @@ const EncounterCard = ({ data, showDetailsLink = true }) => {
       await post(url, dataSend);
       clearMerge();
       setMergeComplete(true);
+      
     } catch (error) {
       setMergeError(error instanceof Error ? error.message : "Merge failed");
     } finally {
       setIsMerging(false);
+      window.location.reload();
     }
   };
 

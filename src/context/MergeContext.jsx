@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
-
+//record the currenly ecnounter selected to be merge
 const MergeContext = createContext();
 
 export const MergeProvider = ({ children }) => {

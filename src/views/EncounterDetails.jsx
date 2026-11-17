@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch";
 import EncounterCard from "../components/EncounterCard";
 import MergeBar from "../components/MergeBar";
 
-
+//Display one speceific encounter when user click on the encounter post title. Also display some potential related posts
 const EncounterDetails = () => {
   const { id } = useParams();
   const requestOptions = useMemo(

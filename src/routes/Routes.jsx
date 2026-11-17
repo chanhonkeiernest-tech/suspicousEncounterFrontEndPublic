@@ -29,6 +29,7 @@ function ProtectedRoute() {
   return <Outlet />
 }
 
+//route set up for all the view and links
 export const router = createBrowserRouter([
   {
     path: '/',

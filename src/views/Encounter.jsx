@@ -3,7 +3,7 @@ import AllEncounter from "../components/AllEncounter";
 import MergeBar from "../components/MergeBar";
 import { useSearch } from "../context/SearchContext"
 
-
+//Main all encounter view and allows user to submit query for search 
 const Encounter = () => {
     const {search, tag, type, issue, selectSearch, selectTag, selectType, selectIssue} = useSearch();
     const [inputSearch, setInputSearch] = useState(search);

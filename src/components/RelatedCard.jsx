@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+//Display a single child encounter as a card. Used by any card that display a parent encounter or in some case a child to display its parent
 const RelatedCard = ({data}) => {
     //const current = data?.current ?? {};
      const id = data?._id ?? "no id";

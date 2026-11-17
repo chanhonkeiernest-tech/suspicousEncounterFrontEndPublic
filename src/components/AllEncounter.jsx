@@ -3,7 +3,7 @@ import EncounterCard from "./EncounterCard";
 import useFetch from "../hooks/useFetch";
 
 
-
+//Fetch all encounter and display them via encounter card. 
 const AllEncounter = () => {
   const {search, tag, type, issue} = useSearch();
   const params = new URLSearchParams({ name: search, tag, type, issue });

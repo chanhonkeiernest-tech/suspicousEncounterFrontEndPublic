@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useLogin } from '../context/LoginContext'
-
+//Register page that uses logincontext to login
 const Register = () => {
   const { register, isAuthenticated, isLoading, authError } = useLogin()
   const [error, setError] = useState('')

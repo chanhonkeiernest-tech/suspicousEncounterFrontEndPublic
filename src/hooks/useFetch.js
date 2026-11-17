@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { apiUrl } from "../api";
 
-// A reusable data-fetching hook: any component can call useFetch(url)
+// A reusable data-fetching hook for get: any component can call useFetch(url)
 const useFetch = (url, options) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);

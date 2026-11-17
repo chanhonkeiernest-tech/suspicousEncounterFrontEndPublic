@@ -3,7 +3,7 @@ import UnmergeEncounterCard from "./UnmergeEncounterCard";
 import useFetch from "../hooks/useFetch";
 
 
-
+//Display of all encounter created by the current user. Display using umergeEcounterCard
 const MyEncounters = () => {
   
   const EncounterURL = `/myEncounter`;

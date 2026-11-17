@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useMerge } from "../context/MergeContext";
 import useFetchPost from "../hooks/useFetchPost";
-
+//A visual display of the currently seletected merge using merge context
 const MergeBar = () => {
   const { merge, clearMerge } = useMerge();
   const { data, error, isLoading, post } = useFetchPost();
@@ -12,6 +12,7 @@ const MergeBar = () => {
         () => {},
       );
     }
+    
   }, [merge, post]);
 
   if (!merge) return null;
