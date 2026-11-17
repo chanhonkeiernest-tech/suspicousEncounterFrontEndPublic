@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useLogin } from '../context/LoginContext'
-
+//page that take login information and uses login context to login
 const Login = () => {
   const { login, isAuthenticated, isLoading, authError } = useLogin()
   const [error, setError] = useState('')

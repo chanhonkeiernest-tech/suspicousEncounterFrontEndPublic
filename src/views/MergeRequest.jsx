@@ -1,5 +1,5 @@
 import PendingRequest from "../components/PendingRequest"
-
+//merge request page
 const MergeRequest = () =>{
     return(
         <>

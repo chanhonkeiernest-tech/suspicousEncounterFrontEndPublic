@@ -2,6 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { apiUrl } from "../api";
 
+//login context that save the login related information namely username, id. Also where login, sign up and logout fetch run
 const LoginContext = createContext(null);
 
 const readResponse = async (response) => {

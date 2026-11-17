@@ -11,7 +11,7 @@ const readResponse = async (response) => {
     return body;
   }
 };
-
+// A reusable data-fetching hook for post: any component can call useFetch(url)
 const useFetchPost = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);

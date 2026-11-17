@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
-
+//record the search query created by the user
 const SearchContext = createContext();
 
 export const SearchProvider = ({ children }) => {

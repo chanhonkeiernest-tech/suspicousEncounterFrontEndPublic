@@ -1,6 +1,6 @@
 import MergeBar from "../components/MergeBar";
 import MyEncounters from "../components/MyEncounters";
-
+//My encounter 
 const MyEncounter = () => {
 
     return(

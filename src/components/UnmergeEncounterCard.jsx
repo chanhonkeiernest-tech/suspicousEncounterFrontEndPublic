@@ -5,6 +5,7 @@ import { useMerge } from "../context/MergeContext";
 import useFetchPost from "../hooks/useFetchPost";
 import useFetchDelete from "../hooks/useFetchDelete"; 
 
+//Display a single encounter card but not limited to parent encounter. Support merge, unmerge and delete of encounter
 const UnmergeEncounterCard = ({ data, showDetailsLink = true }) => {
   const { merge, selectMerge, clearMerge } = useMerge();
   const [expand, setExpand] = useState(false);

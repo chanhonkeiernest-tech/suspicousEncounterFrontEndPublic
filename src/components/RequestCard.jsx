@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useFetchPost from "../hooks/useFetchPost";
 
-
+//Display a single merge reqest awating to be consent. Also handle consent and reject operations
 const RequestCard = ({data, reject}) => {
   const [mergeError, setMergeError] = useState("");
   const [action, setAction] = useState("");

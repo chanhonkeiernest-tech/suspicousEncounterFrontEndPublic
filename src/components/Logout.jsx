@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useLogin } from '../context/LoginContext'
-
+//Logout operation
 const Logout = () => {
   const { logout, user } = useLogin()
   const signOutStarted = useRef(false)
