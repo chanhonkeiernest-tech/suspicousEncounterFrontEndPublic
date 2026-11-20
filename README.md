@@ -34,4 +34,19 @@ Maps out all the url path for this frontend
 - RequestCard: Displays the merge request and allows users to either accept or reject it.
 - UmergeEncounterCard: This is a special card component that is only accessible via MyEncounter as the function it grants requires authentication. It grants additional functions of unmerge and delete of encounters for the encounter created by the signed in user.
 
+# Installation
+Ensue your computer can run vite and react project. 
+Node environment is recommended. 
+Fork the project and make sure to run npm install than run the vite project.
+
+# Usage
+One may setup their own backend server and insert the link in the .env.
+
+# Technologies Used
+React, vite
+
+# improvement
+In certain visual, user will not be able to view the encounter post in detail by click its title. This occur in pending request and within the merge bar. 
+The screen is not rendering during certain action.
+
 
