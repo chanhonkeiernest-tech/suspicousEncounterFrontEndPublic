@@ -16,15 +16,15 @@ searchContext: Keep tracks of the search query the user has entered
 Routes
 Maps out all the url path for this frontend 
 ## Views
-What user expect to see 
-Encounter: Main page where user view all current encounter posted to the server. Also default page. It uses:
+**What user expect to see** 
+- [Encounter: Main page where user view all current encounter posted to the server. Also default page. It uses:
 MergeBar
 SearchContext
 AllEncounter
 EncounterDetails: Displays a single encounter object alongside some recommended closely related one. It uses:
 EncounterCard
 MergeBar
-useFetch
+useFetch]
 Login: Support login function and take input from user. It uses:
 LoginContext
 MergeReuqest: Displays all current pending requests awaiting the user for approval. It uses
