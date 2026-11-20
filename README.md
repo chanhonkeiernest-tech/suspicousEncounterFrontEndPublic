@@ -47,6 +47,6 @@ React, vite
 
 # improvement
 In certain visual, user will not be able to view the encounter post in detail by click its title. This occur in pending request and within the merge bar. 
-The screen is not rendering during certain action.
+Some views are not rendering during certain action.
 
 
