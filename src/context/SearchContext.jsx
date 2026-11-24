@@ -11,14 +11,16 @@ export const SearchProvider = ({ children }) => {
 
   const selectSearch = (nextSearch) => {
     const trimmedSearch = nextSearch.trim();
-    if (trimmedSearch) {
+    if(trimmedSearch==="") setSearch("");
+    else if (trimmedSearch) {
       setSearch(trimmedSearch);
     }
   };
 
   const selectTag = (nextTag) => {
     const trimmedTag = nextTag.trim();
-    if (trimmedTag) {
+    if(trimmedTag==="") setTag("");
+    else if (trimmedTag) {
       setTag(trimmedTag);
     }
   };
